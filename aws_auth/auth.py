@@ -64,7 +64,7 @@ class Auth:
             return input("Enter MFA token: ")
 
         process = Process()
-        session_token = process.execute('op signin my -r')
+        session_token = process.execute('op signin --account elmerdigital.1password.com')
         if Context.verbose:
             self.console.print(f"OP Session token: {session_token}")
         otp = process.execute(f'op --session {session_token} get totp {os.getenv("OTP_1PASSWORD_ITEM_UUID")} otp')
