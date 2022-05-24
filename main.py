@@ -7,7 +7,7 @@ from rich import print
 from aws_auth.context import Context
 from aws_auth.auth import Auth
 
-__version__ = '2.0.0'
+__version__ = '2.0.1'
 
 
 def version(ctx, param, value):
